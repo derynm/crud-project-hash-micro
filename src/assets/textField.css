@@ -1,0 +1,116 @@
+.app-text-field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.app-text-field-container {
+  position: relative;
+  width: 100%;
+}
+
+.outlined .outline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid var(--color-grey);
+  border-radius: 5px;
+  pointer-events: none;
+  transition: border-color 0.2s;
+}
+
+.outlined.focused .outline {
+  border: 2px solid var(--color-navy);
+}
+
+.outlined.error .outline {
+  border-color: #f44336;
+}
+
+.outlined.focused.error .outline {
+  border: 2px solid #f44336;
+}
+
+.app-text-field-label {
+  position: absolute;
+  pointer-events: none;
+  transform-origin: left top;
+  transition: 0.2s ease all;
+  background-color: transparent;
+  padding: 0 5px;
+  left: 12px;
+  top: 16px;
+  font-size: 16px;
+  color: var(--color-grey);
+  z-index: 1;
+}
+
+.required-indicator {
+  color: var(--color-grey);
+  margin-left: 2px;
+}
+
+.app-text-field-input {
+  width: 100%;
+  font-size: 16px;
+  padding: 15px 14px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  color: var(--color-black);
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 56px;
+}
+
+.outlined.focused .app-text-field-label,
+.outlined.has-value .app-text-field-label {
+  transform: translateY(-24px) scale(0.75);
+  background-color: white;
+  padding: 0 5px;
+  color: var(--color-navy);
+}
+
+.outlined.focused.error .app-text-field-label,
+.outlined.has-value.error .app-text-field-label {
+  color: #f44336;
+}
+
+.app-text-field.error .app-text-field-input {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.helper-text {
+  margin-top: 4px;
+  margin-left: 14px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.54);
+  min-height: 16px;
+}
+
+.app-text-field.error .helper-text {
+  color: #f44336;
+}
+
+.app-text-field.disabled .outline {
+  border-style: dotted;
+  border-color: rgba(0, 0, 0, 0.26);
+}
+
+.app-text-field.disabled .app-text-field-input {
+  color: rgba(0, 0, 0, 0.38);
+  cursor: not-allowed;
+}
+
+.app-text-field.disabled .app-text-field-label {
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.app-text-field-input::placeholder {
+  color: transparent;
+}
+
+.app-text-field.focused .app-text-field-input::placeholder {
+  color: rgba(0, 0, 0, 0.38);
+}
