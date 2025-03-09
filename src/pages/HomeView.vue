@@ -1,6 +1,10 @@
 <template>
-  <h1>halo</h1>
+  <h1>
+    <AppButton variant="orange">Orange</AppButton>
+  </h1>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
+import AppButton from '@/components/app/AppButton.vue';
+
 </script>

@@ -1,0 +1,73 @@
+.app-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.3s; 
+}
+
+.app-button-orange {
+  background-color: var(--color-orange);
+  color: white;
+}
+
+.app-button-outlined-orange {
+  background-color: white;
+  color: var(--color-orange);
+  border-color: var(--color-orange);    
+}
+
+.app-button-orange:hover {
+  color: var(--color-orange);
+  border-color: var(--color-orange);
+  background-color: white;
+}
+
+.app-button-orange:disabled {
+  background-color: var(--color-orange-light);
+  color: white;
+}
+
+.app-button-red {
+  background-color: var(--color-red);
+  color: white;
+}
+
+.app-button-outlined-red {
+  background-color: white;
+  color: var(--color-red);
+  border-color: var(--color-red);    
+}
+
+.app-button-red:hover {
+  color: var(--color-red);
+  border-color: var(--color-red);
+  background-color: white;
+}
+
+.app-button-red:disabled {
+  background-color: var(--color-red-light);
+  color: white;
+}
+
+.app-button-navy {
+  background-color: var(--color-navy);
+  color: white;
+}
+
+.app-button-outlined-navy {
+  background-color: white;
+  color: var(--color-navy);
+  border-color: var(--color-navy);    
+}
+
+.app-button-navy:hover {
+  color: var(--color-navy);
+  border-color: var(--color-navy);
+  background-color: white;
+}
+
+.app-button-navy:disabled {
+  background-color: var(--color-navy-light);
+  color: white;
+}
