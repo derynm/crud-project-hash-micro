@@ -1,0 +1,81 @@
+.app-table {
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: white;
+    margin-bottom: 24px;
+    overflow-x: auto;
+  }
+  
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  .data-table th {
+    color: rgba(0, 0, 0, 0.87);
+    font-weight: 500;
+    font-size: 16px;
+    padding: 16px;
+    background-color: var(--color-red);
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid rgba(224, 224, 224, 1);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+  
+  .data-table td {
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 14px;
+    text-align: left;
+    padding: 16px;
+    border-bottom: 1px solid rgba(224, 224, 224, 1);
+    height: 52px;
+    box-sizing: border-box;
+  }
+  
+  .data-row {
+    transition: background-color 0.2s ease;
+  }
+  
+  .data-row:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+  
+  .actions-cell {
+    white-space: nowrap;
+  }
+  
+  .empty-state, .loading-state {
+    text-align: center;
+    padding: 24px;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 0.875rem;
+  }
+  
+  .loading-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 0;
+  }
+  
+  
+  /* Responsive styles */
+  @media (max-width: 600px) {
+    .data-table th,
+    .data-table td {
+      padding: 12px 8px;
+    }
+  
+    .table-container {
+      border-radius: 0;
+      box-shadow: none;
+      border: 1px solid rgba(224, 224, 224, 1);
+    }
+  }
