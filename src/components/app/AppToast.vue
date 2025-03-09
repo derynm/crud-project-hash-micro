@@ -1,23 +1,19 @@
 <template>
-  <div
-    class="app-toast"
-    :class="`app-toast--${props.variant}`">
+  <div class="app-toast" :class="`app-toast--${props.variant}`">
     {{ props.message }}
   </div>
 </template>
 
 <script setup lang="ts">
-
 const props = withDefaults(
   defineProps<{
     message: string
-    variant?: 'success' | 'error' | 'info',
+    variant?: 'success' | 'error' | 'info'
   }>(),
   {
-    variant: 'success' ,
+    variant: 'success',
   },
 )
-
 </script>
 
 <style scoped>

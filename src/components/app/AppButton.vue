@@ -3,10 +3,11 @@
     class="app-button"
     :class="[
       `app-button-${props.variant}`,
-      { [`app-button-outlined-${props.variant}`]: props.outlined }
+      { [`app-button-outlined-${props.variant}`]: props.outlined },
     ]"
-    v-bind="$attrs">
-    <slot/>
+    v-bind="$attrs"
+  >
+    <slot />
   </button>
 </template>
 
@@ -21,6 +22,4 @@ interface props {
 const props = defineProps<props>()
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

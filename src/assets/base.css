@@ -1,14 +1,13 @@
 :root {
   --color-red: #b92f1e;
   --color-red-light: #bb4131;
-  --color-orange: #FEA110;
+  --color-orange: #fea110;
   --color-orange-light: #f7ab2f;
   --color-navy: #1d205f;
   --color-navy-light: #2a2f7f;
   --color-black: #212529;
-  --color-grey: #797979
+  --color-grey: #797979;
 }
-
 
 *,
 *::before,

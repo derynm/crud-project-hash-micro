@@ -3,7 +3,7 @@
   border-radius: 5px;
   cursor: pointer;
   border: 1px solid transparent;
-  transition: all 0.3s; 
+  transition: all 0.3s;
 }
 
 .app-button-orange {
@@ -14,7 +14,7 @@
 .app-button-outlined-orange {
   background-color: white;
   color: var(--color-orange);
-  border-color: var(--color-orange);    
+  border-color: var(--color-orange);
 }
 
 .app-button-orange:hover {
@@ -36,7 +36,7 @@
 .app-button-outlined-red {
   background-color: white;
   color: var(--color-red);
-  border-color: var(--color-red);    
+  border-color: var(--color-red);
 }
 
 .app-button-red:hover {
@@ -58,7 +58,7 @@
 .app-button-outlined-navy {
   background-color: white;
   color: var(--color-navy);
-  border-color: var(--color-navy);    
+  border-color: var(--color-navy);
 }
 
 .app-button-navy:hover {

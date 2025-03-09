@@ -8,6 +8,6 @@ import ToastPlugin from './plugins/toast'
 const app = createApp(App)
 
 app.use(router)
-app.use(ToastPlugin);
+app.use(ToastPlugin)
 
 app.mount('#app')
