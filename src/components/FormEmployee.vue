@@ -42,7 +42,7 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, defineProps } from 'vue'
+import { reactive, defineProps, inject } from 'vue'
 import AppTextField from './app/AppTextField.vue'
 import AppButton from './app/AppButton.vue'
 import { useRouter } from 'vue-router'
@@ -79,7 +79,14 @@ if (props.initialData) {
   Object.assign(form, props.initialData)
 }
 
+const toast = inject<any>('toast')
+
 const submitForm = () => {
+  toast({
+    message: `Success ${props.isEdit ? 'Edit':'Create'} Employee Data ${form.name}`,
+    variant: props.isEdit ? 'info' : 'success',
+    duration: 3000,
+  })
   router.push('/employee')
 }
 </script>

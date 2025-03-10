@@ -2,7 +2,7 @@
   <div class="app-container">
     <h3 class="title-page">Edit Employee Data</h3>
     <AppCard>
-      <FormEmployee :initial-data="detailEmployee(parseInt(route.params.id as string))!" />
+      <FormEmployee is-edit :initial-data="detailEmployee(parseInt(route.params.id as string))!" />
     </AppCard>
   </div>
 </template>

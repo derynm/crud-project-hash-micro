@@ -23,8 +23,8 @@ const props = withDefaults(
   right: 20px;
   top: 20px;
   z-index: 9999;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 500;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
   padding: 8px;
