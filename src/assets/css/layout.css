@@ -3,16 +3,21 @@
   display: flex;
   width: 100%;
   min-height: 100vh;
+  position: relative;
 }
 
 .app-layout-content-container {
   width: 84%;
   flex: 1;
+  position: relative;
 }
 
 
 /* sidebar */
 .app-sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
   min-width: 16%;
   background-color: var(--color-red);
   color: var(--color-white);
@@ -64,12 +69,15 @@
 /* Navbar */
 .app-navbar {
   display: flex;
+  position: sticky;
+  top: 0;
   width: 100%;
   justify-content: end;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: var(--color-white);
-  color: var(--color-red);
+  background-color: white;
+  z-index: 1000;
+  color: var(--color-red); 
   border-bottom: 1px solid rgba(0, 0, 0, 0.159);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

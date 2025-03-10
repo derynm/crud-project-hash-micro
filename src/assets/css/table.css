@@ -50,12 +50,17 @@
   white-space: nowrap;
 }
 
-.empty-state,
-.loading-state {
-  text-align: center;
-  padding: 24px;
+.empty-state {
+  text-align: center !important; 
+  padding: 24px !important;
   color: rgba(0, 0, 0, 0.54);
-  font-size: 0.875rem;
+  font-size: 0.875rem !important;
+}
+.loading-state {
+  text-align: center !important; 
+  padding: 12px !important;
+  color: var(--color-red) !important; 
+  font-size: 2.875rem !important;
 }
 
 .loading-content {
@@ -66,7 +71,19 @@
   padding: 24px 0;
 }
 
-/* Responsive styles */
+.action-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+}
+
+.action-container button {
+  padding: 8px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
 @media (max-width: 600px) {
   .data-table th,
   .data-table td {

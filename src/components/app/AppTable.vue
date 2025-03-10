@@ -19,7 +19,7 @@
           >
             <div class="loading-content">
               <slot name="loading" v-if="$slots.loading" />
-              <span v-else>Loading data...</span>
+              <Icon icon="eos-icons:loading" v-else>Loading data...</Icon>
             </div>
           </td>
         </tr>
@@ -52,6 +52,8 @@
 </template>
 
 <script setup lang="ts">
+import { Icon } from '@iconify/vue';
+
 export interface TableColumn {
   key: string
   label: string
