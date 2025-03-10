@@ -1,22 +1,38 @@
 <template>
   <div class="app-sidebar">
-    <img src="../../assets/images/logo-hashmicro-white.webp" alt="hashmicro logo" />
+    <div>
+      <img src="../../assets/images/logo-hashmicro-white.webp" alt="hashmicro logo" />
 
-    <ul class="app-sidebar-menu">
-      <li
-        v-for="item in menu"
-        :key="item.routeName"
-        class="app-sidebar-menu-item"
-        :class="{
-          'active-menu': route.name === item.routeName || route.fullPath.includes(item.routeName),
-        }"
-      >
-        <RouterLink :to="item.to">
-          <Icon :icon="item.icon" />
-          <span>{{ item.title }}</span>
-        </RouterLink>
-      </li>
-    </ul>
+<ul class="app-sidebar-menu">
+  <li
+    v-for="item in menu"
+    :key="item.routeName"
+    class="app-sidebar-menu-item"
+    :class="{
+      'active-menu': route.name === item.routeName || route.fullPath.includes(item.routeName),
+    }"
+  >
+    <RouterLink :to="item.to">
+      <Icon :icon="item.icon" />
+      <span>{{ item.title }}</span>
+    </RouterLink>
+  </li>
+</ul>
+    </div>
+
+    <div class="app-sidebar-footer">
+      <p>Dery Nugroho Marjuki</p>
+      <div>
+        <a href="https://github.com/derynm/crud-project-hash-micro" target="_blank">
+          <Icon icon="mdi:github" />
+        </a>
+        <a href="https://www.linkedin.com/in/derynm/" target="_blank">
+          <Icon icon="mdi:linkedin" />
+        </a>
+      </div>
+    </div>
+
+
   </div>
 </template>
 
