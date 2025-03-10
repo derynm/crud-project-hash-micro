@@ -11,35 +11,35 @@
 </template>
 
 <script setup lang="ts">
-import { Icon } from '@iconify/vue';
-import { ref, onBeforeUnmount } from 'vue';
+import { Icon } from '@iconify/vue'
+import { ref, onBeforeUnmount } from 'vue'
 
 const emit = defineEmits<{
-  (e: 'search', value: string): void;
-}>();
+  (e: 'search', value: string): void
+}>()
 
-const searchValue = ref<string>('');
-let debounceTimeout: number | null = null;
+const searchValue = ref<string>('')
+let debounceTimeout: number | null = null
 
 const debouncedSearch = () => {
   if (debounceTimeout) {
-    clearTimeout(debounceTimeout);
+    clearTimeout(debounceTimeout)
   }
 
   debounceTimeout = setTimeout(() => {
-    emit('search', searchValue.value);
-  }, 300);
-};
+    emit('search', searchValue.value)
+  }, 300)
+}
 
 const clearDebounceTimeout = () => {
   if (debounceTimeout) {
-    clearTimeout(debounceTimeout);
+    clearTimeout(debounceTimeout)
   }
-};
+}
 
 onBeforeUnmount(() => {
-  clearDebounceTimeout();
-});
+  clearDebounceTimeout()
+})
 </script>
 
 <style scoped>

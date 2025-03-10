@@ -9,12 +9,8 @@
 </template>
 
 <script setup lang="ts">
-import AppNavbar from './AppNavbar.vue';
-import AppSidebar from './AppSidebar.vue';
-
-
+import AppNavbar from './AppNavbar.vue'
+import AppSidebar from './AppSidebar.vue'
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

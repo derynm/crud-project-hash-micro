@@ -6,13 +6,13 @@
       <template #actions="{ item }">
         <div class="action-container">
           <AppButton variant="navy" @click="router.push(`/employee/${item.id}`)">
-            <Icon icon="bxs:user-detail"/>
+            <Icon icon="bxs:user-detail" />
           </AppButton>
           <AppButton variant="orange">
-            <Icon icon="material-symbols:edit"/>
+            <Icon icon="material-symbols:edit" />
           </AppButton>
           <AppButton variant="red">
-            <Icon icon="material-symbols:delete"/>
+            <Icon icon="material-symbols:delete" />
           </AppButton>
         </div>
       </template>
@@ -21,14 +21,14 @@
 </template>
 
 <script setup lang="ts">
-import AppButton from '@/components/app/AppButton.vue';
-import AppTable from '@/components/app/AppTable.vue';
-import InputSeacrh from '@/components/InputSeacrh.vue';
+import AppButton from '@/components/app/AppButton.vue'
+import AppTable from '@/components/app/AppTable.vue'
+import InputSeacrh from '@/components/InputSeacrh.vue'
 
-import { useEmployee } from '@/composable/useEmployee';
+import { useEmployee } from '@/composable/useEmployee'
 
-import { Icon } from '@iconify/vue';
-import { useRouter } from 'vue-router';
+import { Icon } from '@iconify/vue'
+import { useRouter } from 'vue-router'
 
 const { employeesData, isLoading, doFilterEmployee } = useEmployee()
 
@@ -40,9 +40,7 @@ const columns = [
   { key: 'position', label: 'Position' },
   { key: 'department', label: 'Department' },
   { key: 'join_date', label: 'Join Date' },
-];
+]
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

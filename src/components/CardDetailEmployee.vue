@@ -1,6 +1,5 @@
 <template>
   <AppCard class="card-detail-employee">
-
     <div class="card-detail-employee-name">
       <p>Employee ID</p>
       <p>{{ props.employee.emp_id }}</p>
@@ -35,24 +34,21 @@
       <p>Join Date</p>
       <p>{{ props.employee.join_date }}</p>
     </div>
-
-
   </AppCard>
 </template>
 
 <script setup lang="ts">
-import type { Employee } from '@/dummy';
-import AppCard from './app/AppCard.vue';
-import { computed } from 'vue';
+import type { Employee } from '@/dummy'
+import AppCard from './app/AppCard.vue'
+import { computed } from 'vue'
 
 const props = defineProps<{
-  employee: Employee;
-}>();
-
+  employee: Employee
+}>()
 
 const numberToRupiah = computed(() => {
-  return `Rp ${props.employee.salary.toLocaleString('id-ID')}`;
-});
+  return `Rp ${props.employee.salary.toLocaleString('id-ID')}`
+})
 </script>
 
 <style scoped>

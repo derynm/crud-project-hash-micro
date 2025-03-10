@@ -20,7 +20,7 @@ const router = createRouter({
       path: '/employee/:id',
       name: 'employee-detail',
       component: DetailEmployee,
-    }
+    },
   ],
 })
 

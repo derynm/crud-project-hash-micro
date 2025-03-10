@@ -51,15 +51,15 @@
 }
 
 .empty-state {
-  text-align: center !important; 
+  text-align: center !important;
   padding: 24px !important;
   color: rgba(0, 0, 0, 0.54);
   font-size: 0.875rem !important;
 }
 .loading-state {
-  text-align: center !important; 
+  text-align: center !important;
   padding: 12px !important;
-  color: var(--color-red) !important; 
+  color: var(--color-red) !important;
   font-size: 2.875rem !important;
 }
 

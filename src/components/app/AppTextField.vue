@@ -1,11 +1,14 @@
 <template>
   <div
     class="app-text-field outlined"
-      :class="{
-        'has-value': hasValue,
-        'focused': isFocused,
-        'error': !!errorMessage, 'disabled': disabled, 'required': required
-      }">
+    :class="{
+      'has-value': hasValue,
+      focused: isFocused,
+      error: !!errorMessage,
+      disabled: disabled,
+      required: required,
+    }"
+  >
     <div class="app-text-field-container">
       <label :for="id" class="app-text-field-label">
         {{ label }}
@@ -37,17 +40,17 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+import { ref, computed } from 'vue'
 
 interface Props {
-  label: string;
-  type?: string;
-  placeholder?: string;
-  helperText?: string;
-  errorMessage?: string;
-  disabled?: boolean;
-  readonly?: boolean;
-  required?: boolean;
+  label: string
+  type?: string
+  placeholder?: string
+  helperText?: string
+  errorMessage?: string
+  disabled?: boolean
+  readonly?: boolean
+  required?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -58,20 +61,19 @@ const props = withDefaults(defineProps<Props>(), {
   disabled: false,
   readonly: false,
   required: false,
-});
+})
 
-const modelValue = defineModel();
+const modelValue = defineModel()
 
-const id = `app-text-field-${props.label.replace(/\s+/g, '-').toLowerCase()}`;
-const inputRef = ref<HTMLInputElement | null>(null);
-const isFocused = ref(false);
+const id = `app-text-field-${props.label.replace(/\s+/g, '-').toLowerCase()}`
+const inputRef = ref<HTMLInputElement | null>(null)
+const isFocused = ref(false)
 
 const hasValue = computed(() => {
-  return modelValue.value !== null && modelValue.value !== undefined && modelValue.value !== '';
-});
+  return modelValue.value !== null && modelValue.value !== undefined && modelValue.value !== ''
+})
 
 const onBlur = () => {
-  isFocused.value = false;
-};
-
+  isFocused.value = false
+}
 </script>
