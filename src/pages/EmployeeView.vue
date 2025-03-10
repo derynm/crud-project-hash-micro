@@ -5,7 +5,21 @@
       <InputSeacrh @search="doFilterEmployee" />
       <AppButton variant="navy" @click="router.push('/employee/new')">Add Employee</AppButton>
     </div>
-    <AppTable :columns="columns" :items="employeesData" :loading="isLoading">
+
+    <LayoutSelector @change-layout="handleChangeLayout" :layout-selected="layoutSelected" />
+
+    <ListCardEmployee
+      :employeesData="employeesData"
+      @delete-employee="handleDeleteEmployee"
+      v-if="layoutSelected === 'card'"
+    />
+
+    <AppTable
+      v-if="layoutSelected === 'table'"
+      :columns="columns"
+      :items="employeesData"
+      :loading="isLoading"
+    >
       <template #actions="{ item }">
         <div class="action-container">
           <AppButton variant="navy" @click="router.push(`/employee/${item.id}`)">
@@ -28,6 +42,8 @@
 import AppButton from '@/components/app/AppButton.vue'
 import AppTable from '@/components/app/AppTable.vue'
 import InputSeacrh from '@/components/InputSeacrh.vue'
+import LayoutSelector from '@/components/LayoutSelector.vue'
+import ListCardEmployee from '@/components/ListCardEmployee.vue'
 import ModalConfirmationDelete from '@/components/ModalConfirmationDelete.vue'
 
 import { useEmployee } from '@/composable/useEmployee'
@@ -39,6 +55,8 @@ import { useRouter } from 'vue-router'
 const { employeesData, isLoading, doFilterEmployee } = useEmployee()
 
 const router = useRouter()
+
+const layoutSelected = ref<'table' | 'card'>('table')
 
 const columns = [
   { key: 'emp_id', label: 'id' },
@@ -55,6 +73,8 @@ const handleDeleteEmployee = (id: number) => {
   deletedEmployee.value = id
   showConfirmationDelete.value = true
 }
-</script>
 
-<style scoped></style>
+const handleChangeLayout = (layout: 'table' | 'card') => {
+  layoutSelected.value = layout
+}
+</script>
