@@ -1,5 +1,12 @@
 @import './base.css';
+@import './layout.css';
 @import './button.css';
 @import './table.css';
 @import './modal.css';
 @import './textField.css';
+
+
+.app-container {
+  padding: 20px;
+  width: 100%;
+}
