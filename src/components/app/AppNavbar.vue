@@ -1,6 +1,5 @@
 <template>
   <nav class="app-navbar">
-    <Icon icon="stash:burger-classic" class="burger-menu" />
 
     <div class="app-navbar-user">
       <p>Dery Nugroho</p>
