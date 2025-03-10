@@ -83,7 +83,7 @@ const toast = inject<any>('toast')
 
 const submitForm = () => {
   toast({
-    message: `Success ${props.isEdit ? 'Edit':'Create'} Employee Data ${form.name}`,
+    message: `Success ${props.isEdit ? 'Edit' : 'Create'} Employee Data ${form.name}`,
     variant: props.isEdit ? 'info' : 'success',
     duration: 3000,
   })

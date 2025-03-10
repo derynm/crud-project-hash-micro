@@ -7,7 +7,9 @@
         v-for="item in menu"
         :key="item.routeName"
         class="app-sidebar-menu-item"
-        :class="{ 'active-menu': route.name === item.routeName }"
+        :class="{
+          'active-menu': route.name === item.routeName || route.fullPath.includes(item.routeName),
+        }"
       >
         <RouterLink :to="item.to">
           <Icon :icon="item.icon" />
