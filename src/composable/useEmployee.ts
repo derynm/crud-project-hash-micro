@@ -7,6 +7,10 @@ export function useEmployee() {
   const employeesData = ref(employee);
   const isLoading = ref(false);
 
+  const detailEmployee = (id: number) => {
+    return employee.find((emp) => emp.id === id);
+  }
+
   const doFilterEmployee = (keyword: string) => {
     isLoading.value = true;
     setTimeout(() => {
@@ -25,6 +29,7 @@ export function useEmployee() {
   return {
     employeesData,
     isLoading,
+    detailEmployee,
     doFilterEmployee
   }
 }

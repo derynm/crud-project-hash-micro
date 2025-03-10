@@ -5,7 +5,7 @@
     <AppTable :columns="columns" :items="employeesData" :loading="isLoading">
       <template #actions="{ item }">
         <div class="action-container">
-          <AppButton variant="navy">
+          <AppButton variant="navy" @click="router.push(`/employee/${item.id}`)">
             <Icon icon="bxs:user-detail"/>
           </AppButton>
           <AppButton variant="orange">
@@ -28,8 +28,11 @@ import InputSeacrh from '@/components/InputSeacrh.vue';
 import { useEmployee } from '@/composable/useEmployee';
 
 import { Icon } from '@iconify/vue';
+import { useRouter } from 'vue-router';
 
 const { employeesData, isLoading, doFilterEmployee } = useEmployee()
+
+const router = useRouter()
 
 const columns = [
   { key: 'emp_id', label: 'id' },
