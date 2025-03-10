@@ -3,21 +3,21 @@
     <div>
       <img src="../../assets/images/logo-hashmicro-white.webp" alt="hashmicro logo" />
 
-<ul class="app-sidebar-menu">
-  <li
-    v-for="item in menu"
-    :key="item.routeName"
-    class="app-sidebar-menu-item"
-    :class="{
-      'active-menu': route.name === item.routeName || route.fullPath.includes(item.routeName),
-    }"
-  >
-    <RouterLink :to="item.to">
-      <Icon :icon="item.icon" />
-      <span>{{ item.title }}</span>
-    </RouterLink>
-  </li>
-</ul>
+      <ul class="app-sidebar-menu">
+        <li
+          v-for="item in menu"
+          :key="item.routeName"
+          class="app-sidebar-menu-item"
+          :class="{
+            'active-menu': route.name === item.routeName || route.fullPath.includes(item.routeName),
+          }"
+        >
+          <RouterLink :to="item.to">
+            <Icon :icon="item.icon" />
+            <span>{{ item.title }}</span>
+          </RouterLink>
+        </li>
+      </ul>
     </div>
 
     <div class="app-sidebar-footer">
@@ -31,8 +31,6 @@
         </a>
       </div>
     </div>
-
-
   </div>
 </template>
 
