@@ -46,13 +46,11 @@ onBeforeUnmount(() => {
 .input-search {
   display: flex;
   align-items: center;
-  float: right;
   max-width: 400px;
   width: 100%;
   border: 1px solid var(--color-grey);
   border-radius: 5px;
   padding: 4px 18px;
-  margin-bottom: 24px;
 }
 
 .input-search input {

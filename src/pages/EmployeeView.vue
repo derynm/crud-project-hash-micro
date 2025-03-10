@@ -1,14 +1,17 @@
 <template>
   <div class="app-container">
     <h3 class="title-page">Employee Data</h3>
-    <InputSeacrh @search="doFilterEmployee" />
+    <div style="display: flex; justify-content: space-between; margin-bottom: 1rem">
+      <InputSeacrh @search="doFilterEmployee" />
+      <AppButton variant="navy" @click="router.push('/employee/new')">Add Employee</AppButton>
+    </div>
     <AppTable :columns="columns" :items="employeesData" :loading="isLoading">
       <template #actions="{ item }">
         <div class="action-container">
           <AppButton variant="navy" @click="router.push(`/employee/${item.id}`)">
             <Icon icon="bxs:user-detail" />
           </AppButton>
-          <AppButton variant="orange">
+          <AppButton variant="orange" @click="router.push(`/employee/${item.id}/edit`)">
             <Icon icon="material-symbols:edit" />
           </AppButton>
           <AppButton variant="red" @click="handleDeleteEmployee(item.id)">
@@ -17,7 +20,7 @@
         </div>
       </template>
     </AppTable>
-    <ModalConfirmationDelete v-model:show="showConfirmationDelete" :emp_id="deletedEmployee"/>
+    <ModalConfirmationDelete v-model:show="showConfirmationDelete" :emp_id="deletedEmployee" />
   </div>
 </template>
 

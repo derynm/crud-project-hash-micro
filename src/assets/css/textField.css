@@ -61,7 +61,6 @@
   color: var(--color-black);
   border-radius: 5px;
   box-sizing: border-box;
-  height: 56px;
 }
 
 .outlined.focused .app-text-field-label,

@@ -1,9 +1,11 @@
 <template>
   <AppModal v-model:show="show">
     <div class="modal-confirmation-delete">
-      <p>Are you sure you want to delete {{ detailEmployee(props.emp_id as number)?.name }} Data ?</p>
+      <p>
+        Are you sure you want to delete {{ detailEmployee(props.emp_id as number)?.name }} Data ?
+      </p>
       <div class="modal-confirmation-delete-button">
-        <AppButton variant="navy" @click="show=false">Cancel</AppButton>
+        <AppButton variant="navy" @click="show = false">Cancel</AppButton>
         <AppButton variant="red" @click="handleDeleteEmployee">Yes</AppButton>
       </div>
     </div>
@@ -11,13 +13,12 @@
 </template>
 
 <script setup lang="ts">
-import { useEmployee } from '@/composable/useEmployee';
-import AppButton from './app/AppButton.vue';
-import AppModal from './app/AppModal.vue';
-import { inject } from 'vue';
+import { useEmployee } from '@/composable/useEmployee'
+import AppButton from './app/AppButton.vue'
+import AppModal from './app/AppModal.vue'
+import { inject } from 'vue'
 
 const { detailEmployee } = useEmployee()
-
 
 const show = defineModel<boolean>('show', {
   default: false,
@@ -36,13 +37,12 @@ const handleDeleteEmployee = () => {
     duration: 3000,
   })
 }
-
 </script>
 
 <style scoped>
 .modal-confirmation-delete {
   display: flex;
-  align-items: center ;
+  align-items: center;
   flex-direction: column;
   gap: 16px;
 }

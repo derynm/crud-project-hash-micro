@@ -70,6 +70,10 @@ const inputRef = ref<HTMLInputElement | null>(null)
 const isFocused = ref(false)
 
 const hasValue = computed(() => {
+  if (props.type === 'date') {
+    return true
+  }
+
   return modelValue.value !== null && modelValue.value !== undefined && modelValue.value !== ''
 })
 
